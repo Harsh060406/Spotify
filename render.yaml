@@ -1,7 +1,7 @@
+
 services:
   - type: web
-    name: music-player
-    env: python
-    buildCommand: ""
-    startCommand: python server.py
+    name: Spotify
+    env: static
+    staticPublishPath: .
     plan: free
