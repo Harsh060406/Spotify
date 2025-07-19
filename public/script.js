@@ -191,7 +191,7 @@ async function main() {
         songUL.innerHTML = "";
 
         for (const song of All_song) {
-            const fullURL = song.replace("25", "")
+            const fullURL = song
             const result = decodeURIComponent(song.substring(song.lastIndexOf("/") + 1).replace(".mp3", ""))
             const song_name = result.replace("%20", "")
             if (song_name.toLowerCase().includes(searchTerm)) {
