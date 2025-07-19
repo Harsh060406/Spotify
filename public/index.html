@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="icon" href="https://open.spotify.com/favicon.ico" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div id="logo"><img src="images/Screenshot 2025-07-12 182307.png" alt=""></div>
+        <button type="button" id="home"><img src="images/home-5-fill.png" alt="home"></button>
+        <div id="search_bar">
+            <div id="search"><img src="images/search-line.png" alt=""></div>
+            <div><input type="text" id="myInput" class="hint" placeholder="What do you want to play?"></div>
+            <div id="line">|</div>
+            <div id="logo1"><img src="images/archive-stack-line.png" alt=""></div>
+        </div>
+        <div class="box" id="left">
+            <div id="top">
+                <div id="library">
+                    <p>Your Library</p>
+                    <div id="icon"><img src="images/book-shelf-fill (1).png" alt=""></div>
+                </div>
+                <button type="button" id="create">+ Create</button>
+            </div>
+            <div class="songlist">
+                <ul>
+                </ul>
+            </div>
+            <!-- <div class="small_box">
+                <div>
+                    <h4>Create your first playlist</h4>
+                    <h5>It's easy, we'll help you</h5>
+                    <button type="button" id="create_playlist" class="btn">Create playlist</button>
+                </div>
+            </div>
+            <div class="small_box">
+                <div>
+                    <h4>Let's find some podcasts to follow</h4>
+                    <h5>We'll keep you updated on new episodes</h5>
+                    <button type="button" id="browse" class="btn">Browse podcasts</button>
+                </div>
+            </div> -->
+        </div>
+        <div class="box" id="right">
+            <div id="header">
+                <!-- <div class="row" id="all">All</div> -->
+                <div class="row" data-folder="music" id="music">Music</div>
+                <div class="row" data-folder="podcasts" id="podcasts">Podcasts</div>
+                <div id="signup">Sign up</div>
+                <div id="login">Log in</div>
+            </div>
+            <div id="fakeheader"></div>
+            <div class="music-section">
+                <div class="playlist">
+                    <h2>Spotify Playlists</h2>
+                    <div class="cardcontainer">
+                        <div data-folder="ncs1" class="card">
+                            <div class="play"><img src="images/play-fill.png" alt=""></div>
+                            <img src="https://i.scdn.co/image/ab67616d00001e02d685edc6513b33bbe1624080" alt="">
+                            <h4>Happy Hits!</h4>
+                            <p>Hits to boost your mood and fill you with happiness!</p>
+                        </div>
+                        <div data-folder="ncs2" class="card">
+                            <div class="play"><img src="images/play-fill.png" alt=""></div>
+                            <img src="https://i.scdn.co/image/ab67616d00001e02d685edc6513b33bbe1624080" alt="">
+                            <h4>Happy Hits!</h4>
+                            <p>Hits to boost your mood and fill you with happiness!</p>
+                        </div>
+                        <div data-folder="ncs3" class="card">
+                            <div class="play"><img src="images/play-fill.png" alt=""></div>
+                            <img src="https://i.scdn.co/image/ab67616d00001e02d685edc6513b33bbe1624080" alt="">
+                            <h4>Happy Hits!</h4>
+                            <p>Hits to boost your mood and fill you with happiness!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="podcasts-section">
+                <div class="playlist">
+                    <h2>Spotify Playlists</h2>
+                    <div class="cardcontainer">
+                        <div data-folder="pdc1" class="card">
+                            <div class="play"><img src="images/play-fill.png" alt=""></div>
+                            <img src="https://i.scdn.co/image/ab67616d00001e02d685edc6513b33bbe1624080" alt="">
+                            <h4>Happy Hits!</h4>
+                            <p>Hits to boost your mood and fill you with happiness!</p>
+                        </div>
+                        <div data-folder="pdc2" class="card">
+                            <div class="play"><img src="images/play-fill.png" alt=""></div>
+                            <img src="https://i.scdn.co/image/ab67616d00001e02d685edc6513b33bbe1624080" alt="">
+                            <h4>Happy Hits!</h4>
+                            <p>Hits to boost your mood and fill you with happiness!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="playbar">
+        <div id="songinfo"></div>
+        <div class="songbuttons">
+            <img id="prev" src="previous.svg" alt="">
+            <img id="playsong" src="play.svg" alt="">
+            <img id="next" src="next.svg" alt="">
+        </div>
+        <div class="seekbar">
+            <div class="circle">
+
+            </div>
+        </div>
+        <div id="songduration"></div>
+        <div class="volume">
+            <img id="full" src="volume.svg" alt="">
+            <div class="volseekbar">
+                <div class="volcircle"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
