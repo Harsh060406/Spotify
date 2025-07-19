@@ -22,7 +22,7 @@ async function getAllSongs() {
         if(element.href.includes(`/songs/${currSection}/`) && !element.href.endsWith(".mp3")) {
             const relativePath = element.getAttribute("href").slice(0, -1);
             console.log("Folder found:", relativePath);
-            const b = await fetch(`/songs/${currSection}/${relativePath}/`);
+            const b = await fetch(`${relativePath}/`);
             const resp = await b.text();
 
             const dev = document.createElement("div");
