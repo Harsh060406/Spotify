@@ -19,10 +19,10 @@ async function getAllSongs() {
         const element = as[index];
         console.log("Found link:", element.href);
 
-        if(element.href.includes(`/songs/${currSection}/`) && !element.href.endsWith(".mp3")) {
-            const relativePath = element.getAttribute("href").slice(0, -1);
-            console.log("Folder found:", relativePath);
-            const b = await fetch(`${relativePath}/`);
+        if (element.href.includes(`/songs/${currSection}/`) && !element.href.endsWith(".mp3")) {
+            const fullPath = new URL(element.href).pathname; 
+            console.log("Folder found:", fullPath);
+            const b = await fetch(fullPath);              
             const resp = await b.text();
 
             const dev = document.createElement("div");
@@ -35,15 +35,17 @@ async function getAllSongs() {
 
                 if (item.href.endsWith(".mp3")) {
                     const relPath = item.getAttribute("href");
-                    const fullUrl = `${window.location.origin}${relPath}`
-                    console.log(fullUrl)
+                    const fullUrl = `${window.location.origin}${relPath}`;
+                    console.log(fullUrl);
                     allSongs.push(fullUrl);
                 }
             }
         }
     }
-    return allSongs
+
+    return allSongs;
 }
+
 
 async function getSongs(folder) {
     currFolder = folder
